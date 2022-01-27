@@ -3,11 +3,14 @@ call plug#begin("~/.vim/plugged")
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'bling/vim-airline'
+  Plug 'jeetsukumaran/vim-buffergator'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'MortenStabenau/matlab-vim'  
   Plug 'preservim/nerdcommenter'
 call plug#end()
+
+set number
 
 "Config Section
 let g:NERDTreeShowHidden = 1
@@ -59,3 +62,9 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
+
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '"
+"let g:airline#extensions#tabline#left_alt_sep = '|'"
